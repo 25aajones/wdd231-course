@@ -1,0 +1,20 @@
+# NPS Grading Prompt (Legacy)
+
+This file has been superseded by assignment-specific prompts:
+
+- [NPS 2b Full](nps-2b-full.md)
+- [NPS 2b Fast TA](nps-2b-fast-ta.md)
+- [NPS 1 Full](nps-1-full.md)
+- [NPS 1 Fast TA](nps-1-fast.md)
+- [NPS 2 Full](nps-2-full.md)
+- [NPS 2 Fast TA](nps-2-fast.md)
+- [NPS 3 Full](nps-3-full.md)
+- [NPS 3 Fast TA](nps-3-fast.md)
+- [NPS 4 Full](nps-4-full.md)
+- [NPS 4 Fast TA](nps-4-fast.md)
+- [NPS 5 Full](nps-5-full.md)
+- [NPS 5 Fast TA](nps-5-fast.md)
+- [NPS 6 Full](nps-6-full.md)
+- [NPS 6 Fast TA](nps-6-fast.md)
+- [NPS 7 Full](nps-7-full.md)
+- [NPS 7 Fast TA](nps-7-fast.md)

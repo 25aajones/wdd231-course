@@ -17,6 +17,7 @@ tags: [
 ## Ponder
 
 - [Course Setup](../../prove/setup/)
+- [Setup a Custom Copilot Agent](../../ponder/setup-custom-copilot-agent)
 - [Practice with JSON](https://byui-cit.github.io/learning-modules/modules/js/json/ponder1/)
 
 ## Prove

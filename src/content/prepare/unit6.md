@@ -4,7 +4,11 @@ title: Unit 6 Exploration.
 time: 60min
 ---
 
+### Submission note (required)
+
+- Include one sentence in your submission: **What I validated outside AI and how.**
+
 - **Regular Expressions**:
-"What are regular expressions?", what are some examples of using regular expressions?", "How can I make my own regular expressions?"
+  "What are regular expressions?", what are some examples of using regular expressions?", "How can I make my own regular expressions?"
 - **Git Branching**:
-"What is a branch in git?", "Why are they used?", "How can I make a branch?", "How can I bring my branch back into the main branch?"
+  "What is a branch in git?", "Why are they used?", "How can I make a branch?", "How can I bring my branch back into the main branch?"

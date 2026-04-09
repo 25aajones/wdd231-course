@@ -2,7 +2,12 @@
 title: Team Project - part 5
 description: This activity outlines a recommended pace for your project to stay on track.
 time: 1 hour
+aiUsage: yellow
 ---
+
+import AIAuditInstructions from "../../components/AIAuditInstructions.astro";
+
+>AI can be used to help you with this assignment, but you should not rely on it too heavily. Use it to help you understand concepts, troubleshoot or get unstuck, or generate ideas. Do not use it to generate large amounts of code. If you do use AI, make sure to validate what it tells you with other sources.
 
 ## Requirements
 
@@ -18,10 +23,52 @@ This project will be completed in a team of 2 students. After forming your team 
 - URL parameters (data that is passed from page to page in an app through the URL, for example https://example.com/page2.html?id=34 Send the `id` of `34` to the code running at `page2.html`)
 - Use of modules for organization
 
+{/* ## Team checkpoint reflection (required)
+
+When you submit this milestone, include a short team reflection (4–8 bullets total):
+
+- Who owned which tasks this week (role snapshot).
+- Two key implementation decisions and why you chose them.
+- One integration issue/bug and how you verified the fix.
+- If AI was used: what was used, what was accepted/rejected, and how it was validated. */}
+
+<AIAuditInstructions>
+
+```text
+You are a senior web app auditor. Perform a final quality audit of our completed project.
+
+Required feature coverage to verify:
+- Validated form
+- Local storage persistence
+- API/json data usage
+- Drop-down menu or modal
+- CSS animation
+- Responsive design
+- Accessibility and UX quality
+- URL parameters
+- Modular code organization
+
+Please audit for:
+1) Requirement coverage completeness and evidence.
+2) Accessibility and UX quality issues.
+3) Reliability issues (error handling, edge cases, bad input).
+4) Maintainability (organization, duplication, readability).
+5) Basic best practices (performance quick wins, broken links, obvious security/privacy concerns in frontend behavior).
+
+Output format:
+- Top 12 findings with severity (High/Medium/Low).
+- Why each matters.
+- One concrete fix per finding.
+- “Ship-now” checklist: must-fix vs nice-to-have.
+```
+
+</AIAuditInstructions>
+
 ## Checkpoint
 
-This is the end. Turn in your completed project!
-
-## Meet with the instructor
-
-Each unit your team should meet with the instructor to review progress and discuss potential problems. Your instructor will give you more details about how this is to happen. It is your responsibility to make sure this meeting does occur!
+This is the end. Turn in your completed project! Prepare a 3-5 minute video demo of your project to share with the instructor. In your video, be sure to cover:
+- The problem your app solves and the key features you implemented.
+- A demo of the key features in action.
+- A brief reflection on the development process, including any challenges you faced and how you overcame them
+- If you used AI: how you used it, what you accepted/rejected, and how you validated it. Did you generate less than 20% of your code with AI? If not, be prepared to explain why you chose to use more AI than recommended and how you validated the AI-generated code.
+- Pick one feature that you implemented and that you are particularly proud of and explain why you like it. Explain also how you implemented it and any challenges you faced in doing so. Make sure to show and explain the code for this feature in your video. HTML, CSS and Javascript. 

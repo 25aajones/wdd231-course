@@ -1,0 +1,124 @@
+---
+title: NPS - part 2b (Project Brief)
+description: Build out the NPS homepage using provided static data, following project-style requirements and acceptance criteria rather than step-by-step instructions.
+time: 2 hours
+aiUsage: yellow
+---
+
+>AI can be used to help you with this assignment, but you should not rely on it too heavily. Use it to clarify concepts, debug issues, and improve your approach. Do not use it to generate large amounts of final code. Validate everything with your own testing.
+
+## Project context
+
+Treat this activity like a real development task from a lead developer:
+
+> “Complete the NPS homepage implementation using the provided static data source. Deliver a responsive, accessible page that matches the target mockups and keeps code maintainable for future pages.”
+
+import Figure from "../../components/Figure.astro";
+
+<Figure src="/images/nps-homepage-complete-lg.webp" alt="Part 2 finished large screen">Target result (large screen)</Figure>
+<Figure src="/images/nps-homepage-complete-sm.webp" alt="Part 2 finished small screen">Target result (small screen)</Figure>
+
+## Scope and constraints
+
+- Work individually.
+- Use the provided project structure and static dataset.
+- Keep the page focused on the three content areas:
+  - Current Conditions
+  - Fees and Passes
+  - Visitor Centers
+- Build for maintainability: this is part of a multi-step project.
+
+## Deliverables
+
+1. A completed homepage (`index.html` + JS + CSS) matching the target layout and behavior.
+2. Dynamic rendering of park-specific content from data (not hardcoded content text in main sections).
+3. Refactored, readable implementation that is easy to extend in future assignments.
+
+## Acceptance criteria
+
+Your work is complete when all are true:
+
+### Data-driven content
+
+- Park name and summary content are rendered from data.
+- Three info cards are rendered from a data structure (not manually duplicated HTML blocks).
+- Footer contact details render from the correct records in data:
+  - Mailing address
+  - Voice phone number
+
+### UX and layout
+
+- Layout matches the provided mockups at narrow and wide widths.
+- Content hierarchy is clear and readable.
+- Images behave responsively.
+
+### Code quality
+
+- Major rendering concerns are separated into focused functions/modules.
+- Repetition is minimized (templates/helpers where appropriate).
+- Naming is clear and consistent.
+
+### Verification
+
+- `npm run start` works as expected.
+- `npm run build` and `npm run preview` run successfully and match expected behavior.
+
+## Suggested approach (professional workflow)
+
+Use this workflow as guidance, not a strict checklist:
+
+1. **Read the data model first**
+   - Identify the exact properties needed for intro, cards, and footer.
+   - Decide how to map data to UI components.
+
+2. **Define rendering contracts**
+   - Choose which functions are responsible for:
+     - header-related updates,
+     - intro rendering,
+     - card rendering,
+     - footer rendering.
+
+3. **Build vertically in small slices**
+   - Complete one visible section end-to-end before moving to the next.
+   - Verify each slice in the browser before continuing.
+
+4. **Refactor after functionality works**
+   - Extract reusable templates/helpers.
+   - Keep module boundaries clean for future pages.
+
+5. **Run production checks before submission**
+   - Confirm build and preview output.
+
+## Working with your custom TutorMode agent
+
+You should have a custom tutoring agent available from the Setup Custom Copilot Agent activity.
+
+Use it for:
+
+- breaking tasks into small milestones,
+- reviewing your plan before coding,
+- debugging specific errors,
+- getting partial examples for patterns (not full solutions),
+- generating test/verification checklists.
+
+Prompt patterns that work well:
+
+- “Help me design the function boundaries for this page based on these requirements.”
+- “Review this function and suggest one refactor for readability and reuse.”
+- “I’m getting this error. Help me diagnose root cause step-by-step.”
+- “Give me a validation checklist for responsive + accessibility basics on this page.”
+
+## Submission reflection (required)
+
+When you submit this activity, include a short reflection (4–8 bullets total):
+
+- What you implemented and how you structured the solution.
+- One bug/issue you encountered, root cause, and verification of the fix.
+- One refactor you made and why it improved maintainability.
+- If you used AI: what you asked, what you accepted/rejected, and how you validated the results.
+
+## Instructor's Solution
+
+As part of this activity, compare your approach with the instructor version after you have worked independently for at least one hour.
+
+After working as far as you can, [click here for the instructor's solution](https://github.com/matkat99/nps/tree/unit-1b).

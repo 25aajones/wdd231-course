@@ -4,12 +4,16 @@ title: Unit 2 Exploration.
 time: 30min
 ---
 
-- **Javascript Fetch**:  
-"What is Fetch in Javascript?", "What does it mean to be asynchronous in Javascript?", "What is a promise?", "How can I use promises with Fetch?", "How can I use Fetch to retrieve data from a JSON file?", "How can I use Fetch to retrieve data from a REST API such as the pokeapi?"
-- **APIs (Application Programming Interface)**:  
-"What is an API?", "How could I use the national park service api to get information about Yellowstone national park?" "How could I use the national park service api to get information about all national parks?",  "How could I use the national park service api to get information about all national parks in a specific state?"
+### Submission note (required)
 
-<!-- 
+- Include one sentence in your submission: **What I validated outside AI and how.**
+
+- **Javascript Fetch**:  
+  "What is Fetch in Javascript?", "What does it mean to be asynchronous in Javascript?", "What is a promise?", "How can I use promises with Fetch?", "How can I use Fetch to retrieve data from a JSON file?", "How can I use Fetch to retrieve data from a REST API such as the pokeapi?"
+- **APIs (Application Programming Interface)**:  
+  "What is an API?", "How could I use the national park service api to get information about Yellowstone national park?" "How could I use the national park service api to get information about all national parks?", "How could I use the national park service api to get information about all national parks in a specific state?"
+
+<!--
 ### Prompt
 
 After you have asked a few questions about the topics above, try entering the following into the Chat prompt and use it to review and solidify your understanding:

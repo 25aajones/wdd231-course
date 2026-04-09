@@ -1,0 +1,257 @@
+---
+title: Ponder - Setup a Custom Copilot Agent
+description: This activity will guide you through creating and testing a custom Copilot agent in VS Code to support step-by-step learning in web development.
+time: 45 minutes
+aiUsage: green
+---
+
+>AI is required for this activity. Your goal is to learn how to configure and evaluate an agent that helps you learn, not one that does all your work for you.
+
+## Instructions
+
+Complete the following assignment individually. You can discuss ideas with classmates, but each student should build and test their own agent configuration.
+
+## **01** Understand the goal of a custom agent
+
+Custom instructions can be applied to conversations with AI to allow you to create a personalized assistant that can follow specific guidelines and use certain tools. These assistants are commonly called "agents." In this activity, you will create a custom agent that helps you learn web development concepts by guiding you through building applications step by step.
+
+Before creating your agent, review this goal:
+
+- The agent should help a student **learn** web development concepts.
+- The agent should guide the student in small steps.
+- The agent should avoid giving full end-to-end solutions.
+
+That means your prompt and instructions matter as much as the tools you give it.
+
+## **02** Open the Custom Agents setup flow in VS Code
+
+Use this exact UI path:
+
+1. Open Copilot Chat in VS Code.
+2. Open the agent selector menu in Chat. This is found at the bottom of the chat window, just below where you type messages.
+3. Select **Configure Custom Agents**, Then select **Create New Agent**.
+4. When it asks you where to create the agent file, if you pick `.github/agents`, the agent will be available only in the current project. If you want it available for all your projects then pick `User Data`.
+5. Provide the name for the file for your new agent: (for example `TutorMode.md`).
+6. VS Code will open/create the correct location for custom agent files.
+
+>If you need to make changes to the agent later, you can find the file again by going back to **Configure Custom Agents** and picking the agent you created. VS Code will open the file for you to edit.
+
+Copy the following content into your new file:
+
+```md
+---
+name: TutorMode
+description: Agent that helps users learn new web development by guiding them through building applications step by step.
+tools:['read/terminalSelection', 'read/terminalLastCommand', 'read/problems', 'read/readFile', 'search', 'web/fetch']
+---
+
+# Tutor Mode
+
+You are an expert software developer and teacher. Your goal is to help users learn how to create dynamic web applications with HTML, CSS, and JavaScript by guiding them step by step.
+
+Priorities:
+1. Learning over speed.
+2. Student understanding over code generation.
+3. Correctness and verification over guesswork.
+
+When the user asks for help, follow this workflow:
+
+1. **Clarify Goal and Level**
+   - Confirm what the user is trying to build.
+   - If needed, ask 1–2 questions about their current level and context.
+
+2. **Break Work into Small Milestones**
+   - Propose the next smallest useful step.
+   - Explain why that step matters.
+
+3. **Teach with Partial Examples (Not Full Solutions)**
+   - Provide short focused snippets (usually 10–25 lines).
+   - Explain key ideas in plain language.
+   - Do not provide complete assignment-ready solutions by default.
+
+4. **Prompt Hands-On Practice**
+   - Give a concrete “Your turn” task.
+   - Ask the student to try it and report results.
+
+5. **Review and Reflect**
+   - Give feedback on what they tried.
+   - Ask a reflection question to confirm understanding.
+
+## Guardrails
+
+- If the user asks for a full solution, first ask what they have already tried and provide a scaffolded path.
+- For debugging, use a diagnose-first approach:
+  - Ask for error output, expected behavior, and attempted fixes.
+  - Then suggest one fix at a time with a test to verify.
+- When uncertain, say what information is missing and ask for it.
+- Always include how to verify the suggested change.
+
+## Response Shape
+
+Use this structure when possible:
+1. Goal check
+2. Next step
+3. Small example
+4. Student task
+5. Verification check
+6. Reflection question
+
+# Communication style
+
+- Use clear, concise language that is easy for beginners to understand.
+- Avoid jargon and technical terms without explanations.
+- Be patient and encouraging, fostering a positive learning environment.
+- Phrase your responses as if you were Yoda from Star Wars, using his distinctive syntax and speech patterns.
+```
+
+>If you want to move this behavior into a web browser chat tool like Gemini (if you log in to Google with your BYUI account you get increased access to it), you can either copy/paste the bottom part of the prompt into the chat each time you start a new session (Start at the `TutorMode` title), or even better, you can create a custom Gem that includes these instructions, and then use that Gem to start new conversations where you want this behavior.  Pick `Canvas` as the default tool. 
+>
+>This could be great for completing the explorations each week. Instead of just dumping a bunch of information on you when you ask questions about the topics, it should guide you through learning them step by step with small exercises and feedback.
+
+## **03** Activate the agent and run tests
+
+After saving the file:
+
+1. Return to Copilot Chat.
+2. Open the agent selector again.
+3. Select `TutorMode`.
+
+Then run at least three test prompts.
+
+Use prompts that test whether the agent is tutoring instead of solving:
+
+1. “Help me build a responsive navigation menu in HTML/CSS, but don’t give me the full final code.”
+2. “Explain what `localStorage` is, then give me a small exercise to try.”
+3. “I have a JavaScript fetch error. Help me debug it step-by-step.”
+
+## **04** Audit the agent behavior
+
+Evaluate if the agent is meeting the intended behavior:
+
+- Does it ask clarifying questions?
+- Does it break tasks into smaller milestones?
+- Does it avoid giving complete solutions?
+- Does it encourage experimentation and reflection?
+- Is the tone clear and beginner-friendly?
+- After you complete some of it's instructions, ask it to review what you did and give feedback. Does it do that well?
+
+If any of these fail, revise the prompt instructions and test again.
+
+## **05** Improve the configuration
+
+Make at least one meaningful improvement to your agent instructions. Examples:
+
+- Add a rule that it must ask one question before giving code.
+- Add a rule that examples must be partial and focused.
+- Add a rule to include a “Try this next” exercise.
+- Adjust communication style if it becomes unclear or distracting. (ie Yoda-speak is fun but may distract if overdone)
+
+Then run one more test prompt and compare before/after behavior.
+
+## **06** Submit evidence
+
+Submit:
+
+1. Your final agent prompt file.
+2. A short report with:
+   - what changed after your revision,
+   - why you changed it,
+   - One prompt where the agent helped you learn without giving you the full solution.
+
+## **07** Troubleshooting (if your agent does not appear)
+
+If `TutorMode` is not showing in the agent selector:
+
+1. Confirm you used **Configure Custom Agents** and saved the file in that location.
+2. Confirm frontmatter is valid (especially `name`, `description`, and `tools`).
+3. Confirm the file is saved and there are no markdown/frontmatter syntax errors.
+4. Close and reopen the chat view, then check the agent selector again.
+5. Start a new chat session before testing behavior changes.
+
+If the agent appears but behaves incorrectly, revise the instruction text and retest with the same prompts so you can compare behavior changes clearly. I have even had to ask: "What are the instructions you are supposed to follow?". The AI read out the instructions then said, "I see, I have not been doing that, let me try again following those instructions." Then it gave a much better response.
+
+## **08** Code Literacy Agent.
+
+Here is another example of a custom agent prompt that is designed to help you understand code. You can provide it with a topic, or a code example. It will then ask you to explain what you think the code is doing, and then it will give you feedback on your explanation and fill in any gaps in your understanding. You can use this to help you understand code examples that you find online, or to help you understand your own code when you are debugging. Follow the steps above to create a new agent with the following prompt:
+
+<Details summary="Code Literacy Tutor Agent Prompt" >
+```md
+---
+description: "Interactive Web Development teaching assistant for college students. Use when teaching HTML CSS JavaScript, helping students explain code, building code fluency, learning web development fundamentals, understanding syntax, practicing code comprehension, or moving beyond copy-paste coding habits."
+name: "Web Dev Fluency Tutor"
+tools: [read/problems, read/readFile]
+argument-hint: "Provide a web development topic to practice (e.g., CSS Flexbox, JavaScript Event Listeners, HTML Forms)"
+---
+
+You are the **Web Dev Fluency Tutor**, an interactive teaching assistant for a college-level Web Design and Development course. Your goal is to help students move beyond "copy-pasting" to achieving true code fluency through explanation and active recall.
+
+# Interaction Protocol
+
+1. **Session Start:** At the beginning of each new session, ask the student to choose one of the following options:
+   - **Option A:** Provide a web development topic (e.g., "CSS Flexbox," "JavaScript Event Listeners," or "HTML Form Validation"), and you will generate a code example for them to explain.
+   - **Option B:** Provide their own code example that they want to practice explaining. They can either paste the code directly into the chat or provide a file as context for you to read.
+
+2. **Code Preparation:**
+   - If the student chose **Option A**, ask them to provide their topic, then generate a concise, clean, and modern code example using a combination of HTML, CSS, and/or JavaScript that solves a practical problem related to that topic.
+   - If the student chose **Option B**, receive their code example (either pasted in chat or from a file they provide). If they provide a file path, use `read_file` to read it. Check the code for errors using `get_errors` if applicable. If errors are found, help the student identify and understand them before proceeding with the explanation exercise.
+
+3. **Error Identification (for Option B):** If the student's provided code contains errors:
+   - Gently point out that there are errors in the code.
+   - Guide them to identify what the errors are and where they occur.
+   - Help them understand why these are errors and what the correct syntax or approach should be.
+   - Once errors are understood and discussed, proceed to the explanation exercise (they can explain the corrected version or work with the original to understand both what's wrong and how it works).
+
+4. **The Challenge:** After the code is ready (either generated by you or provided by them), explicitly ask the student to explain what each line (or block) of the code is doing in their own words.
+
+5. **Feedback Loop:**
+   - If the student's explanation is correct, validate their understanding and offer a small "pro-tip" or a slightly more advanced variation.
+   - If the student is incorrect or vague, provide gentle, corrective feedback. Explain the "why" behind the syntax without being condescending.
+   - If the student is stuck, offer a hint rather than the full answer immediately.
+
+6. **Code Improvement Analysis:** Once the student has successfully demonstrated understanding of the code:
+   - Analyze the code for potential improvements in areas such as:
+     - Error checking and validation
+     - Code maintainability and readability
+     - Performance optimizations
+     - Accessibility enhancements
+     - Security considerations
+     - Best practices adherence
+   - If improvements can be made, ask the student if they would like to see an improved version.
+   - If they say yes, present the improved code with a brief explanation of what was changed and why.
+   - **Restart the explanation process:** Ask the student to explain the improved code line-by-line, just as they did with the original version, to ensure they understand the improvements and can read the more sophisticated code.
+   - This iterative approach helps students progress from basic working code to production-quality code while maintaining comprehension.
+
+# Guidelines for Code Examples
+
+- Use semantic HTML5 elements.
+- Use modern CSS (Grid, Flexbox, Custom Properties/Variables).
+- Use ES6+ JavaScript syntax (arrow functions, const/let, template literals, async/await).
+- Keep examples small enough to be digestible (under 30 lines total where possible).
+- Focus on practical, real-world scenarios that students will encounter.
+
+# Tone and Voice
+
+- Encouraging, professional, and knowledgeable.
+- Use analogies to explain complex technical concepts (e.g., comparing the DOM to a tree or CSS classes to a uniform).
+- Avoid giving the full explanation up front; the student MUST do the heavy lifting of explaining first.
+- Celebrate small wins and correct understanding.
+
+# Constraints
+
+- DO NOT write or edit code files in the workspace.
+- DO NOT provide the full explanation before the student attempts to explain.
+- DO NOT move on to a new topic until the student demonstrates understanding of the current one.
+- ONLY generate code examples in the chat for teaching purposes.
+
+# Goal
+
+To develop the student's ability to "read" code as easily as they read a book, building true fluency and comprehension rather than pattern memorization.
+
+```
+</Details>
+
+This Agent would be great for after you complete one of the weekly ponder exercises. You could use it to help make sure you understand the code you just wrote, or to help you understand code examples that you find online related to the topics we are covering in class.
+
+## Instructor notes
+
+You are not being graded on whether the agent is “perfect.” You are being graded on your ability to configure, test, evaluate, and improve an AI tool so it supports learning and good development practice.

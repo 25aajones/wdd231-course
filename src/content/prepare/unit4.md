@@ -4,14 +4,18 @@ title: Unit 4 Exploration.
 time: 60min
 ---
 
-- **CSS Animations**:  
-"What are CSS Animations?", "What is the difference  between CSS Transitions and CSS Animations?", "How do you create a CSS Animation?", "How do you create a CSS Animation with multiple keyframes?"
-- **Hide and seek with CSS**:  
-"How can I hide things with CSS?", "How can I toggle things with CSS?", "How can I fade things in and out with CSS?", "How can I make something cover the entire browser window with CSS?"
-- **Linters**:  
-"What is a linter?", "Why do developers use linters?", "What is the difference between a linter and a formatter?", "How can I use a linter for javascript in VS Code?", "How can I use a linter for CSS in VS Code?"
+### Submission note (required)
 
-<!-- 
+- Include one sentence in your submission: **What I validated outside AI and how.**
+
+- **CSS Animations**:  
+  "What are CSS Animations?", "What is the difference between CSS Transitions and CSS Animations?", "How do you create a CSS Animation?", "How do you create a CSS Animation with multiple keyframes?"
+- **Hide and seek with CSS**:  
+  "How can I hide things with CSS?", "How can I toggle things with CSS?", "How can I fade things in and out with CSS?", "How can I make something cover the entire browser window with CSS?"
+- **Linters**:  
+  "What is a linter?", "Why do developers use linters?", "What is the difference between a linter and a formatter?", "How can I use a linter for javascript in VS Code?", "How can I use a linter for CSS in VS Code?"
+
+<!--
 ### Prompt
 
 After you have asked a few questions about the topics above, try entering the following into the Chat prompt and use it to review and solidify your understanding:

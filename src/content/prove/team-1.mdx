@@ -5,6 +5,8 @@ time: 2 hours
 aiUsage: yellow
 ---
 
+import AIAuditInstructions from "../../components/AIAuditInstructions.astro";
+
 >AI can be used to help you with this assignment, but you should not rely on it too heavily. Use it to help you understand concepts, troubleshoot or get unstuck, or generate ideas. Do not use it to generate large amounts of code. If you do use AI, make sure to validate what it tells you with other sources.
 
 ## Introduction
@@ -20,6 +22,8 @@ This project will be completed in a team of 2 students. After forming your team 
 - Good user experience (UX) and accessibility
 - URL parameters (data that is passed from page to page in an app through the URL, for example https://example.com/page2.html?id=34 Send the `id` of `34` to the code running at `page2.html`)
 - Use of modules for organization
+
+
 
 ## **01** Meet your teammate
 
@@ -79,6 +83,40 @@ After settling on your app idea, your team should prepare a proposal together wi
     - Where would it make sense to use a drop-down menu or modal?
     - Where are opportunities to use CSS Animations?
 
-## **05** Submit proposal to ILearn
+##  **05** Team checkpoint reflection (required)
+
+When you submit this milestone, include a short team reflection (4–8 bullets total):
+
+- Who owned which tasks this week (role snapshot).
+- Two key implementation decisions and why you chose them.
+- One integration issue/bug and how you verified the fix.
+- If AI was used: what was used, what was accepted/rejected, and how it was validated.
+
+<AIAuditInstructions>
+
+```text
+You are a senior web engineering reviewer. Audit our team project proposal and current repository setup.
+
+Context:
+- We are early in implementation and have project proposal artifacts.
+- Course requirements include: validated form, local storage, API/json data, menu/modal interaction, CSS animation, responsive design, accessibility/UX, URL params, and modular code.
+
+Please produce a concise audit with:
+1) Requirement coverage gaps in our plan.
+2) Scope risks (too large, too vague, missing data source details, missing milestones).
+3) Information architecture and page-flow concerns.
+4) Team workflow concerns (task breakdown quality, dependency blockers, git workflow risks).
+5) Basic best practices checks (semantic-first HTML plan, accessibility plan, naming/file organization, source attribution, testing plan).
+
+Output format:
+- Top 8 findings (High/Medium/Low).
+- Why each finding matters.
+- Specific recommended change for each finding.
+- A prioritized “do next this week” checklist of 5 actions.
+```
+
+</AIAuditInstructions>
+
+## **06** Submit proposal and reflection to ILearn
 
 Submit your proposal to Ilearn. Both teammates should submit the file.

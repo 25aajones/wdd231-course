@@ -3,11 +3,15 @@ title: Unit 2 Exploration.
 time: 30min
 ---
 
+### Submission note (required)
+
+- Include one sentence in your submission: **What I validated outside AI and how.**
+
 - **Branching in Javascript**: "How can I write Javascript code that makes decisions?", "What are valid conditions?"
 - **Events with javascript**: "How can I respond to events from the browser with javascript?"
 - **Coding as a team**: "What are common challenges that arise for inexperienced programmers when writing code as part of a team?", [Making Teams Work](https://byui-cit.github.io/learning-modules/modules/general/team-work/)
 
-<!-- 
+<!--
 
 ### Prompt
 

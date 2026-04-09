@@ -4,7 +4,11 @@ title: Unit 4 Exploration.
 time: 30min
 ---
 
+### Submission note (required)
+
+- Include one sentence in your submission: **What I validated outside AI and how.**
+
 - **CSS Animations**:  
-"What are CSS Animations?", "What is the difference  between CSS Transitions and CSS Animations?", "How do you create a CSS Animation?", "How do you create a CSS Animation with multiple keyframes?"
+  "What are CSS Animations?", "What is the difference between CSS Transitions and CSS Animations?", "How do you create a CSS Animation?", "How do you create a CSS Animation with multiple keyframes?"
 - **Hide and seek with CSS**:  
-"How can I hide things with CSS?", "How can I toggle things with CSS?", "How can I fade things in and out with CSS?", "How can I make something cover the entire browser window with CSS?"
+  "How can I hide things with CSS?", "How can I toggle things with CSS?", "How can I fade things in and out with CSS?", "How can I make something cover the entire browser window with CSS?"

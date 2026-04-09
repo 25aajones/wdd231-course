@@ -32,14 +32,24 @@ After it is done cloning, VS Code will ask if you want to open the repository, s
 
 ## **04** Configure Netlify
 
- We will be using a product called Netlify to host our site. Create an account there and login (I would recommend just using the Github button).
+We will be using a product called Netlify to host our site. Create an account there and login (I would recommend just using the Github button).
 
- After logging in you need to add a new site. Click on the "Add New Site" button and select "Import an Existing Project". Connect to your Github account using the "Github" button. You should see a list of repositories on your account. Find the one that contains the NPS project.
+After logging in you need to add a new site. Click on the "Add New Site" button and select "Import an Existing Project". Connect to your Github account using the "Github" button. You should see a list of repositories on your account. Find the one that contains the NPS project.
 
- Select the "main" branch. Then in the "build command" box enter `npm run build`. Make sure as well that in the "Publish Directory" field it says `dist`. Then "Deploy Site". Netlify will produce a randomized URL for the site that you need to remember. Copy it and put it somewhere you can find it easily. This is the link to your "production" site and is the one you will be turning in. (You could even put this into the Readme.md file to make it easy to find!)
+Select the "main" branch. Then in the "build command" box enter `npm run build`. Make sure as well that in the "Publish Directory" field it says `dist`. Then "Deploy Site". Netlify will produce a randomized URL for the site that you need to remember. Copy it and put it somewhere you can find it easily. This is the link to your "production" site and is the one you will be turning in. (You could even put this into the Readme.md file to make it easy to find!)
 
 > The build version of the site will be considered the production version. This should always work! The instructor should be able to go to that address at any time and not see any errors. Netlify will update your site everytime it sees a change to the "main" branch. So after committing you should probably go check Netlify to make sure nothing broke.
 
 ## **05** Submit Netlify URL
 
 Now that you have your site hosted on Netlify, please submit your link in Microsoft Teams. Your instructor should have created a channel called `NPS Links` for you to submit this in. You can either download the [Teams application](https://www.microsoft.com/en-us/microsoft-teams/download-app) on your computer or phone, or you can use the "Microsoft Education" link in ILearn to access the Team for this course. If you download the client, make sure to use the SSO login with your BYUI login.
+
+## **06** Create a custom AI Agent (Optional)
+
+Follow the instructions to setup a [custom copilot agent](../../ponder/setup-custom-copilot-agent/)
+
+## **07** Github Education (Optional)
+
+Apply for [Github Education](https://github.com/settings/education/benefits?locale=en-US) to get access to Copilot Pro. The account you apply on has to have your byui.edu email address affiliated with it. If you have another account that you are already using you can add the Byui email as a second address in your [profile email settings](https://github.com/settings/emails). Or you could create another Github account with the school email address.
+
+It takes three days after your application is approved for the benefits to kick in. After those 72 hours have passed you can enable Copilot Pro for no charge.
